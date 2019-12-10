@@ -6,7 +6,7 @@ Created on Mon Nov 11 14:45:15 2019
 """
 
 from django import forms
-from.models import Friend
+from.models import Friend, Message
 
 class FriendForm(forms.ModelForm):
     class Meta:
@@ -32,4 +32,7 @@ class CheckForm(forms.Form):
         if (str.lower().startswith('no')):
             raise forms.ValidationError('You input "NO"!')
 
-    
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        friend = ['title', 'content', 'friend']

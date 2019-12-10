@@ -33,4 +33,9 @@ class Message(models.Model):
             self.title + '(' + str(self.pub_date) + ')>'
             
     class Meta:
+<<<<<<< HEAD
         ordering = ('pub_date',)
+=======
+        ordering = ('pub_date',)
+        
+>>>>>>> 9bcb2f8cf9e3322f2c5a41b20e433257b2b27b99
